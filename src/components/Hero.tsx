@@ -30,7 +30,7 @@ function MiniLetter({ text, className }: MiniLetterProps) {
 
 export default function Hero({ onWriteClick }: HeroProps) {
   return (
-    <section className="relative min-h-[620px] flex items-center justify-center overflow-hidden px-12 py-20">
+    <section className="relative min-h-[calc(100vh-61px)] flex items-center justify-center overflow-hidden px-12 py-20">
       {/* Mini letters */}
       <MiniLetter
         text="Dziś wstałam z łóżka. I to jest moja siła."

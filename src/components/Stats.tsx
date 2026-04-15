@@ -1,3 +1,12 @@
+function pluralizeKraje(n: number): string {
+  if (n === 1) return "Kraj";
+  const lastTwo = n % 100;
+  const lastOne = n % 10;
+  if (lastTwo >= 12 && lastTwo <= 14) return "Krajów";
+  if (lastOne >= 2 && lastOne <= 4) return "Kraje";
+  return "Krajów";
+}
+
 interface StatsProps {
   letterCount: number;
 }
@@ -6,7 +15,7 @@ export default function Stats({ letterCount }: StatsProps) {
   const stats = [
     { value: letterCount.toLocaleString("pl-PL"), label: "Opublikowanych listów" },
     { value: "12 841", label: "Przeczytanych" },
-    { value: "34", label: "Krajów" },
+    { value: "34", label: pluralizeKraje(34) },
   ];
 
   return (
