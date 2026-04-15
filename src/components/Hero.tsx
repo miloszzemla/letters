@@ -15,7 +15,7 @@ interface MiniLetterProps {
 function MiniLetter({ text, className }: MiniLetterProps) {
   return (
     <div
-      className={`hidden md:block absolute pointer-events-none max-w-[175px] rounded-sm p-4 text-[12px] leading-[1.6] text-[#525252] ${className}`}
+      className={`absolute pointer-events-none rounded-sm p-3 md:p-4 text-[10px] md:text-[12px] leading-[1.6] text-[#525252] ${className}`}
       style={{
         background: `${paperLinesBg}, #FDFCFA`,
         boxShadow:
@@ -31,30 +31,30 @@ function MiniLetter({ text, className }: MiniLetterProps) {
 export default function Hero({ onWriteClick }: HeroProps) {
   return (
     <section className="relative min-h-[calc(100dvh-61px)] flex items-center justify-center overflow-hidden px-5 py-12 md:px-12 md:py-20">
-      {/* Mini letters */}
+      {/* Mini letters — mobile: 3 visible (top-left, top-right, bottom-center), desktop: all 6 */}
       <MiniLetter
         text="Dziś wstałam z łóżka. I to jest moja siła."
-        className="top-[7%] left-[3%] rotate-[-6deg]"
+        className="max-w-[130px] md:max-w-[175px] top-[3%] left-[4%] md:top-[7%] md:left-[3%] rotate-[-6deg]"
       />
       <MiniLetter
         text="Tata walczył. I wygrał."
-        className="top-[62%] left-[4%] rotate-[4deg]"
+        className="hidden md:block max-w-[175px] top-[62%] left-[4%] rotate-[4deg]"
       />
       <MiniLetter
-        text="Usiadł obok. Nie pytał. Był. Dziękuję."
-        className="top-[10%] right-[4%] rotate-[5deg]"
+        text="Usiadł obok. Nie pytał. Był."
+        className="max-w-[120px] md:max-w-[175px] top-[3%] right-[4%] md:top-[10%] md:right-[4%] rotate-[5deg]"
       />
       <MiniLetter
         text="Przebiegłem trzy kilometry. To mój maraton."
-        className="top-[58%] right-[3%] rotate-[-4deg]"
+        className="hidden md:block max-w-[175px] top-[58%] right-[3%] rotate-[-4deg]"
       />
       <MiniLetter
         text="Zadzwoniłem. Po prostu słuchał."
-        className="bottom-[6%] left-[9%] rotate-[3deg]"
+        className="max-w-[120px] md:max-w-[175px] bottom-[3%] left-[50%] -translate-x-1/2 md:translate-x-0 md:left-[9%] md:bottom-[6%] rotate-[3deg]"
       />
       <MiniLetter
         text="Przyjechał. Został tydzień. Zmienił wszystko."
-        className="bottom-[8%] right-[7%] rotate-[-5deg]"
+        className="hidden md:block max-w-[175px] bottom-[8%] right-[7%] rotate-[-5deg]"
       />
 
       {/* Center content */}
