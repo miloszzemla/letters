@@ -59,17 +59,13 @@ export default function Hero({ onWriteClick }: HeroProps) {
 
       {/* Center content */}
       <div className="relative z-10 text-center max-w-[680px]">
-        {/* Big quote mark */}
-        <span
-          className="block mb-3 md:mb-5 leading-none text-[#E5E5E5] text-[72px] md:text-[120px]"
-          style={{ fontFamily: "Georgia, serif" }}
-          aria-hidden="true"
-        >
-          &ldquo;
-        </span>
-
         {/* Quote */}
         <h1 className="text-[26px] md:text-[44px] font-bold leading-[1.3] md:leading-[1.35] tracking-tight text-[#161616] mb-4">
+          <span
+            className="text-[#E5E5E5] text-[48px] md:text-[72px] leading-[0.5] align-top mr-1"
+            style={{ fontFamily: "Georgia, serif" }}
+            aria-hidden="true"
+          >&ldquo;</span>
           Zostań jeszcze jeden dzień.{" "}
           <span className="hidden md:inline"><br /></span>
           Tylko jeden. Obiecuję, że kiedyś{" "}
