@@ -30,7 +30,7 @@ function MiniLetter({ text, className }: MiniLetterProps) {
 
 export default function Hero({ onWriteClick }: HeroProps) {
   return (
-    <section className="relative min-h-[calc(100vh-61px)] flex items-center justify-center overflow-hidden px-12 py-20">
+    <section className="relative min-h-[calc(100dvh-61px)] flex items-center justify-center overflow-hidden px-5 py-12 md:px-12 md:py-20">
       {/* Mini letters */}
       <MiniLetter
         text="Dziś wstałam z łóżka. I to jest moja siła."
@@ -61,42 +61,44 @@ export default function Hero({ onWriteClick }: HeroProps) {
       <div className="relative z-10 text-center max-w-[680px]">
         {/* Big quote mark */}
         <span
-          className="block mb-5 leading-none text-[#E5E5E5]"
-          style={{ fontFamily: "Georgia, serif", fontSize: "120px" }}
+          className="block mb-3 md:mb-5 leading-none text-[#E5E5E5] text-[72px] md:text-[120px]"
+          style={{ fontFamily: "Georgia, serif" }}
           aria-hidden="true"
         >
           &ldquo;
         </span>
 
         {/* Quote */}
-        <h1 className="text-[44px] font-bold leading-[1.35] tracking-tight text-[#161616] mb-4">
-          Zostań jeszcze jeden dzień.<br />
-          Tylko jeden. Obiecuję, że kiedyś<br />
+        <h1 className="text-[26px] md:text-[44px] font-bold leading-[1.3] md:leading-[1.35] tracking-tight text-[#161616] mb-4">
+          Zostań jeszcze jeden dzień.{" "}
+          <span className="hidden md:inline"><br /></span>
+          Tylko jeden. Obiecuję, że kiedyś{" "}
+          <span className="hidden md:inline"><br /></span>
           przestaniesz liczyć.
         </h1>
 
         {/* Author */}
-        <p className="text-sm text-[#6B6B6B] font-medium mb-10">
+        <p className="text-xs md:text-sm text-[#6B6B6B] font-medium mb-8 md:mb-10">
           — z listu anonimowego autora
         </p>
 
         {/* Tagline */}
-        <p className="text-base text-[#525252] leading-relaxed max-w-[440px] mx-auto mb-9">
+        <p className="text-[15px] md:text-base text-[#525252] leading-relaxed max-w-[440px] mx-auto mb-8 md:mb-9">
           Miejsce, gdzie ludzie piszą listy, które mogą uratować komuś dzień.
           Albo życie.
         </p>
 
         {/* Buttons */}
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <button
             onClick={onWriteClick}
-            className="bg-[#161616] text-white rounded-[10px] px-8 py-3.5 font-semibold text-[15px] hover:opacity-85 transition-opacity cursor-pointer"
+            className="w-full sm:w-auto bg-[#161616] text-white rounded-[10px] px-8 py-3.5 font-semibold text-[15px] hover:opacity-85 transition-opacity cursor-pointer"
           >
             Napisz swój list
           </button>
           <a
             href="#letters"
-            className="bg-transparent text-[#161616] border-[1.5px] border-[#E5E5E5] rounded-[10px] px-8 py-3.5 font-medium text-[15px] hover:border-[#161616] transition-colors"
+            className="w-full sm:w-auto text-center bg-transparent text-[#161616] border-[1.5px] border-[#E5E5E5] rounded-[10px] px-8 py-3.5 font-medium text-[15px] hover:border-[#161616] transition-colors"
           >
             Czytaj listy
           </a>
