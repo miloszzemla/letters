@@ -526,7 +526,7 @@ function AdminPanel() {
       {/* Main content */}
       <main className="max-w-[960px] mx-auto py-8 px-6">
         {/* Stat cards */}
-        <div className="grid grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           {[
             { label: "Oczekujące", value: pending.length },
             { label: "Zatwierdzone dziś", value: approvedToday },

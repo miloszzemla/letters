@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Letter } from "@/lib/types";
 
@@ -22,17 +23,28 @@ interface LetterCardProps {
 }
 
 export default function LetterCard({ letter, index, onClick }: LetterCardProps) {
-  const rotation = rotations[index % 12];
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  const rotation = isMobile ? 0 : rotations[index % 12];
 
   return (
     <motion.div
       onClick={onClick}
       initial={{ rotate: rotation }}
+      animate={{ rotate: rotation }}
       style={{
         outline: "1px solid rgba(0,0,0,0.04)",
         boxShadow: "0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(16,24,40,0.06)",
       }}
-      whileHover={{
+      whileHover={isMobile ? {} : {
         rotate: 0,
         y: -10,
         scale: 1.02,

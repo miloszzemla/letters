@@ -118,9 +118,8 @@ export default function WriteModal({ isOpen, onClose }: WriteModalProps) {
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
             onClick={(e) => e.stopPropagation()}
-            className="relative bg-[#FDFCFA] rounded-md w-full max-w-[680px] max-h-[90vh] overflow-y-auto"
+            className="relative bg-[#FDFCFA] rounded-md w-full max-w-[680px] max-h-[90vh] overflow-y-auto p-6 sm:p-[48px_52px]"
             style={{
-              padding: "48px 52px",
               boxShadow: "0 24px 80px rgba(0,0,0,0.15)",
             }}
           >

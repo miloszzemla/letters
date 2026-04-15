@@ -68,9 +68,8 @@ export default function ReadModal({ letter, onClose }: ReadModalProps) {
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
             onClick={(e) => e.stopPropagation()}
-            className="relative bg-[#FDFCFA] rounded-md w-full max-w-[640px] max-h-[85vh] overflow-y-auto"
+            className="relative bg-[#FDFCFA] rounded-md w-full max-w-[640px] max-h-[85vh] overflow-y-auto p-6 sm:p-[56px_52px_48px]"
             style={{
-              padding: "56px 52px 48px",
               boxShadow: "0 24px 80px rgba(0,0,0,0.15)",
             }}
           >
