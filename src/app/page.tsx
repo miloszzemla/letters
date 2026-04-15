@@ -1,6 +1,7 @@
 import { getPublishedLetters } from "@/lib/letters";
 import HomePage from "@/components/HomePage";
 import Stats from "@/components/Stats";
+import LetterGrid from "@/components/LetterGrid";
 
 export default function Home() {
   const letters = getPublishedLetters();
@@ -8,7 +9,7 @@ export default function Home() {
   return (
     <HomePage letters={letters}>
       <Stats letterCount={letters.length} />
-      {/* Grid will go here later */}
+      <LetterGrid letters={letters} />
     </HomePage>
   );
 }
