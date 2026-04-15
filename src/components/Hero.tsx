@@ -66,11 +66,11 @@ export default function Hero({ onWriteClick }: HeroProps) {
             style={{ fontFamily: "Georgia, serif" }}
             aria-hidden="true"
           >&ldquo;</span>
-          Zostań jeszcze jeden dzień.{" "}
+          Czasem jedno zdanie od obcego{" "}
           <span className="hidden md:inline"><br /></span>
-          Tylko jeden. Obiecuję, że kiedyś{" "}
+          człowieka zmienia więcej{" "}
           <span className="hidden md:inline"><br /></span>
-          przestaniesz liczyć.
+          niż tysiąc rad.
         </h1>
 
         {/* Author */}
