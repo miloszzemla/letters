@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Letters.
 
-## Getting Started
+Anonimowa przestrzeń nadziei. Platforma do pisania i czytania listów, które mogą uratować komuś dzień.
 
-First, run the development server:
+## O projekcie
+
+Letters. to miejsce, gdzie ludzie anonimowo dzielą się swoimi listami — osobistymi tekstami nadziei, przebaczenia, wdzięczności i siły. Celem projektu jest walka z samotnością i pomoc osobom w kryzysie.
+
+## Stack
+
+- Next.js 16 (Static Export)
+- React 19 + TypeScript
+- Tailwind CSS
+- Framer Motion
+- DM Sans (Google Fonts)
+
+## Uruchomienie
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Otwórz [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Dodawanie listów
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Listy przechowywane są jako pliki JSON w `content/letters/published/`. Każdy list to osobny plik:
 
-## Learn More
+```json
+{
+  "id": "2026-04-15-001",
+  "greeting": "Do kogoś —",
+  "body": "Treść listu...",
+  "author": "Anonim",
+  "createdAt": "2026-04-15T10:00:00Z",
+  "status": "published"
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Moderacja
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Panel moderacji dostępny pod `/admin`. Domyślne hasło: `letters2026`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Listy przesłane przez formularz trafiają do localStorage i są widoczne w panelu admina.
 
-## Deploy on Vercel
+## Pomoc
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Jeśli jesteś w kryzysie, zadzwoń:
+- **Telefon Zaufania:** 116 123
+- **Centrum Wsparcia:** 800 70 2222
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Licencja
+
+MIT
