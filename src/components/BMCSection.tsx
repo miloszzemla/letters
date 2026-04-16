@@ -49,7 +49,7 @@ export default function BMCSection() {
           Buy me a coffee
         </a>
 
-        <p className="text-[12px] text-[#9CA3AF] text-center mt-4">
+        <p className="text-[12px] text-[#737373] text-center mt-4">
           Każda kawa pomaga nam dalej działać.
         </p>
       </div>

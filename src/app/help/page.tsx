@@ -61,7 +61,7 @@ export default function Help() {
           <div className="divide-y divide-[#F0F0F0]">
             {helplines.map((line) => (
               <div key={line.tel} className="py-5">
-                <p className="text-[13px] font-medium text-[#767676] mb-1">
+                <p className="text-[13px] font-medium text-[#636363] mb-1">
                   {line.name}
                 </p>
                 <a
@@ -70,7 +70,7 @@ export default function Help() {
                 >
                   {line.number}
                 </a>
-                <p className="text-[13px] text-[#9CA3AF] mt-1">{line.desc}</p>
+                <p className="text-[13px] text-[#737373] mt-1">{line.desc}</p>
               </div>
             ))}
           </div>

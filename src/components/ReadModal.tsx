@@ -131,7 +131,7 @@ export default function ReadModal({ letter, onClose }: ReadModalProps) {
                 <span className="text-base font-semibold text-[#161616] italic">
                   — {letter.author}
                 </span>
-                <span className="text-[13px] text-[#767676]">
+                <span className="text-[13px] text-[#636363]">
                   {formatDatePL(letter.createdAt)}
                 </span>
               </div>

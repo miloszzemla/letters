@@ -48,7 +48,7 @@ export default function LetterGrid({ letters }: LetterGridProps) {
             className="group flex items-center gap-2 bg-transparent text-[#161616] border-[1.5px] border-[#E5E5E5] rounded-[10px] px-8 py-3.5 font-medium text-[15px] hover:border-[#161616] transition-colors cursor-pointer"
           >
             Pokaż więcej listów
-            <span className="text-[13px] text-[#767676] group-hover:text-[#525252] transition-colors">
+            <span className="text-[13px] text-[#636363] group-hover:text-[#525252] transition-colors">
               ({remaining})
             </span>
             <svg

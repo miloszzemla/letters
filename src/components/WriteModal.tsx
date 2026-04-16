@@ -64,7 +64,7 @@ export default function WriteModal({ isOpen, onClose }: WriteModalProps) {
   const getCharCountColor = () => {
     if (charCount >= 3000) return "text-[#DC2626]";
     if (charCount >= 2700) return "text-[#B45309]";
-    return "text-[#767676]";
+    return "text-[#636363]";
   };
 
   const handleSubmit = (e?: React.FormEvent | React.MouseEvent) => {
@@ -99,7 +99,7 @@ export default function WriteModal({ isOpen, onClose }: WriteModalProps) {
   const labelStyle = {
     fontSize: "13px",
     fontWeight: 600,
-    color: "#767676",
+    color: "#636363",
   };
 
   const inputBorderHandlers = {

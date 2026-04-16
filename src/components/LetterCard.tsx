@@ -105,7 +105,7 @@ export default function LetterCard({ letter, index, onClick }: LetterCardProps) 
           <span className="text-sm font-semibold text-[#161616] italic">
             — {letter.author}
           </span>
-          <span className="text-xs text-[#767676]">
+          <span className="text-xs text-[#636363]">
             {formatDatePL(letter.createdAt)}
           </span>
         </div>
