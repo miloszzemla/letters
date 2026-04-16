@@ -45,26 +45,22 @@ export default function About() {
                 step: "01",
                 title: "Napisz",
                 desc: "Otwierasz formularz i piszesz to, co czujesz. Anonimowo. Bez konta.",
-                icon: "✉️",
               },
               {
                 step: "02",
                 title: "Moderacja",
                 desc: "Twój list trafia do kolejki. Sprawdzamy, czy nie zawiera treści, które mogłyby komuś zaszkodzić.",
-                icon: "🛡️",
               },
               {
                 step: "03",
                 title: "Publikacja",
                 desc: "Zatwierdzony list pojawia się na stronie. Ktoś go przeczyta. Może to zmieni czyjś dzień.",
-                icon: "🌍",
               },
             ].map((item) => (
               <div
                 key={item.step}
                 className="relative rounded-xl border border-[#F0F0F0] bg-[#FAFAFA] p-6"
               >
-                <span className="text-2xl mb-3 block">{item.icon}</span>
                 <span className="text-[11px] font-semibold uppercase tracking-widest text-[#BFBFBF] mb-1 block">
                   Krok {item.step}
                 </span>
