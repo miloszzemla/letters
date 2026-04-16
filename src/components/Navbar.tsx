@@ -35,8 +35,9 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
           {/* Logo */}
           <Link
             href="/"
-            className="text-[18px] font-semibold tracking-tight text-[#161616]"
+            className="flex items-center gap-2 text-[18px] font-semibold tracking-tight text-[#161616]"
           >
+            <img src="/logo-letters.svg" alt="" className="w-6 h-6" />
             Letters.
           </Link>
 
@@ -126,8 +127,9 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
               <Link
                 href="/"
                 onClick={() => setMenuOpen(false)}
-                className="text-[18px] font-semibold tracking-tight text-[#161616]"
+                className="flex items-center gap-2 text-[18px] font-semibold tracking-tight text-[#161616]"
               >
+                <img src="/logo-letters.svg" alt="" className="w-6 h-6" />
                 Letters.
               </Link>
               <button
