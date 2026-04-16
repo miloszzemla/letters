@@ -121,8 +121,8 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
             {/* Background */}
             <div className="absolute inset-0 bg-[#111111]" />
 
-            {/* Logo in menu */}
-            <div className="relative z-10 px-6 h-14 flex items-center">
+            {/* Top bar: logo + close */}
+            <div className="relative z-10 px-6 h-14 flex items-center justify-between">
               <Link
                 href="/"
                 onClick={() => setMenuOpen(false)}
@@ -130,6 +130,16 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
               >
                 Letters.
               </Link>
+              <button
+                onClick={() => setMenuOpen(false)}
+                className="w-8 h-8 flex items-center justify-center cursor-pointer"
+                aria-label="Zamknij menu"
+              >
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round">
+                  <line x1="1" y1="1" x2="17" y2="17" />
+                  <line x1="17" y1="1" x2="1" y2="17" />
+                </svg>
+              </button>
             </div>
 
             {/* Links */}
