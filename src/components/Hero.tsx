@@ -112,7 +112,7 @@ export default function Hero({ onWriteClick }: HeroProps) {
           </button>
           <a
             href="#letters"
-            className="w-full sm:w-auto text-center bg-transparent text-[#161616] border-[1.5px] border-[#E5E5E5] rounded-[10px] px-8 py-3.5 font-medium text-[15px] hover:border-[#161616] transition-colors"
+            className="w-full sm:w-auto text-center text-[#161616] rounded-[10px] px-8 py-3.5 font-medium text-[15px] shadow-[inset_0_0_0_1.5px_#E5E5E5] hover:shadow-[inset_0_0_0_1.5px_#161616] transition-all"
           >
             Czytaj listy
           </a>
