@@ -97,10 +97,8 @@ export default function WriteModal({ isOpen, onClose }: WriteModalProps) {
   const canSubmit = body.trim().length >= 20;
 
   const labelStyle = {
-    fontSize: "12px",
+    fontSize: "13px",
     fontWeight: 600,
-    textTransform: "uppercase" as const,
-    letterSpacing: "0.1em",
     color: "#767676",
   };
 
