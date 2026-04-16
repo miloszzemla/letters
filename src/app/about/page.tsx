@@ -39,39 +39,45 @@ export default function About() {
             Jak to działa
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {[
-              {
-                step: "01",
-                title: "Napisz",
-                desc: "Otwierasz formularz i piszesz to, co czujesz. Anonimowo. Bez konta.",
-              },
-              {
-                step: "02",
-                title: "Moderacja",
-                desc: "Twój list trafia do kolejki. Sprawdzamy, czy nie zawiera treści, które mogłyby komuś zaszkodzić.",
-              },
-              {
-                step: "03",
-                title: "Publikacja",
-                desc: "Zatwierdzony list pojawia się na stronie. Ktoś go przeczyta. Może to zmieni czyjś dzień.",
-              },
-            ].map((item) => (
-              <div
-                key={item.step}
-                className="relative rounded-xl border border-[#F0F0F0] bg-[#FAFAFA] p-6"
-              >
-                <span className="text-[11px] font-semibold uppercase tracking-widest text-[#BFBFBF] mb-1 block">
-                  Krok {item.step}
-                </span>
-                <h3 className="text-[16px] font-bold text-[#161616] mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-[14px] leading-relaxed text-[#525252]">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          <div className="relative">
+            {/* Vertical line */}
+            <div
+              aria-hidden="true"
+              className="absolute left-[15px] top-2 bottom-2 w-px bg-[#E5E5E5]"
+            />
+
+            <div className="space-y-10">
+              {[
+                {
+                  title: "Napisz",
+                  desc: "Otwierasz formularz i piszesz to, co czujesz. Anonimowo. Bez konta.",
+                },
+                {
+                  title: "Moderacja",
+                  desc: "Twój list trafia do kolejki. Sprawdzamy, czy nie zawiera treści, które mogłyby komuś zaszkodzić.",
+                },
+                {
+                  title: "Publikacja",
+                  desc: "Zatwierdzony list pojawia się na stronie. Ktoś go przeczyta. Może to zmieni czyjś dzień.",
+                },
+              ].map((item, i) => (
+                <div key={item.title} className="flex gap-6 items-start">
+                  <div className="relative z-10 w-[31px] h-[31px] rounded-full bg-white border border-[#E5E5E5] flex items-center justify-center flex-shrink-0">
+                    <span className="text-[13px] font-semibold text-[#161616]">
+                      {i + 1}
+                    </span>
+                  </div>
+                  <div className="pt-0.5">
+                    <h3 className="text-[16px] font-semibold text-[#161616] mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-[15px] leading-relaxed text-[#525252]">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
