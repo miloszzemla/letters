@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Pomoc — Letters.",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
 export default function Help() {
   return (
     <main className="min-h-screen bg-white">
+      <Navbar />
       <div className="mx-auto max-w-[640px] px-6 py-24">
         <h1 className="mb-4 text-4xl font-bold tracking-tight text-black">
           Potrzebujesz pomocy?

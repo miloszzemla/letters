@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 interface NavbarProps {
-  onWriteClick: () => void;
+  onWriteClick?: () => void;
 }
 
 export default function Navbar({ onWriteClick }: NavbarProps) {
@@ -47,12 +47,21 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
           >
             ☕ Wesprzyj
           </a>
-          <button
-            onClick={onWriteClick}
-            className="bg-[#161616] text-white rounded-lg px-6 py-2.5 text-[14px] font-medium hover:opacity-85 transition-opacity cursor-pointer"
-          >
-            Napisz list
-          </button>
+          {onWriteClick ? (
+            <button
+              onClick={onWriteClick}
+              className="bg-[#161616] text-white rounded-lg px-6 py-2.5 text-[14px] font-medium hover:opacity-85 transition-opacity cursor-pointer"
+            >
+              Napisz list
+            </button>
+          ) : (
+            <Link
+              href="/"
+              className="bg-[#161616] text-white rounded-lg px-6 py-2.5 text-[14px] font-medium hover:opacity-85 transition-opacity"
+            >
+              Napisz list
+            </Link>
+          )}
         </div>
       </div>
     </header>
