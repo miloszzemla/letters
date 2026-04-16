@@ -95,13 +95,13 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
               aria-label="Menu"
             >
               <span
-                className={`block h-[2px] w-5 transition-all duration-300 origin-center ${menuOpen ? "translate-y-[7px] rotate-45 bg-white" : "bg-[#161616]"}`}
+                className={`block h-[2px] w-5 transition-all duration-300 origin-center bg-[#161616] ${menuOpen ? "translate-y-[7px] rotate-45" : ""}`}
               />
               <span
-                className={`block h-[2px] w-5 transition-all duration-300 ${menuOpen ? "opacity-0 bg-white" : "bg-[#161616]"}`}
+                className={`block h-[2px] w-5 transition-all duration-300 bg-[#161616] ${menuOpen ? "opacity-0" : ""}`}
               />
               <span
-                className={`block h-[2px] w-5 transition-all duration-300 origin-center ${menuOpen ? "-translate-y-[7px] -rotate-45 bg-white" : "bg-[#161616]"}`}
+                className={`block h-[2px] w-5 transition-all duration-300 origin-center bg-[#161616] ${menuOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
               />
             </button>
           </div>
@@ -119,14 +119,14 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
             className="fixed inset-0 z-50 md:hidden"
           >
             {/* Background */}
-            <div className="absolute inset-0 bg-[#111111]" />
+            <div className="absolute inset-0 bg-white" />
 
             {/* Top bar: logo + close */}
             <div className="relative z-10 px-6 h-14 flex items-center justify-between">
               <Link
                 href="/"
                 onClick={() => setMenuOpen(false)}
-                className="text-[18px] font-semibold tracking-tight text-white"
+                className="text-[18px] font-semibold tracking-tight text-[#161616]"
               >
                 Letters.
               </Link>
@@ -135,7 +135,7 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
                 className="w-8 h-8 flex items-center justify-center cursor-pointer"
                 aria-label="Zamknij menu"
               >
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#161616" strokeWidth="2" strokeLinecap="round">
                   <line x1="1" y1="1" x2="17" y2="17" />
                   <line x1="17" y1="1" x2="1" y2="17" />
                 </svg>
@@ -157,7 +157,7 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setMenuOpen(false)}
-                      className="block py-5 text-[28px] font-semibold text-white/90 hover:text-white transition-colors border-b border-white/10"
+                      className="block py-5 text-[28px] font-semibold text-[#161616] hover:text-black transition-colors border-b border-[#F0F0F0]"
                     >
                       {link.label}
                     </a>
@@ -165,7 +165,7 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
                     <Link
                       href={link.href}
                       onClick={() => setMenuOpen(false)}
-                      className="block py-5 text-[28px] font-semibold text-white/90 hover:text-white transition-colors border-b border-white/10"
+                      className="block py-5 text-[28px] font-semibold text-[#161616] hover:text-black transition-colors border-b border-[#F0F0F0]"
                     >
                       {link.label}
                     </Link>
@@ -173,7 +173,7 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
                     <a
                       href={link.href}
                       onClick={() => setMenuOpen(false)}
-                      className="block py-5 text-[28px] font-semibold text-white/90 hover:text-white transition-colors border-b border-white/10"
+                      className="block py-5 text-[28px] font-semibold text-[#161616] hover:text-black transition-colors border-b border-[#F0F0F0]"
                     >
                       {link.label}
                     </a>
@@ -191,7 +191,7 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
                 {onWriteClick ? (
                   <button
                     onClick={() => { setMenuOpen(false); onWriteClick(); }}
-                    className="w-full bg-white text-[#161616] rounded-[10px] py-3.5 text-[15px] font-semibold cursor-pointer"
+                    className="w-full bg-[#161616] text-white rounded-[10px] py-3.5 text-[15px] font-semibold cursor-pointer"
                   >
                     Napisz list
                   </button>
@@ -199,7 +199,7 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
                   <Link
                     href="/"
                     onClick={() => setMenuOpen(false)}
-                    className="block w-full bg-white text-[#161616] rounded-[10px] py-3.5 text-[15px] font-semibold text-center"
+                    className="block w-full bg-[#161616] text-white rounded-[10px] py-3.5 text-[15px] font-semibold text-center"
                   >
                     Napisz list
                   </Link>
