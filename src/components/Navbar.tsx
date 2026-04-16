@@ -38,12 +38,22 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
         </nav>
 
         {/* CTA */}
-        <button
-          onClick={onWriteClick}
-          className="bg-[#161616] text-white rounded-lg px-6 py-2.5 text-[14px] font-medium hover:opacity-85 transition-opacity cursor-pointer"
-        >
-          Napisz list
-        </button>
+        <div className="flex items-center gap-3">
+          <a
+            href="https://buymeacoffee.com/letters.project"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[14px] font-medium text-[#6B6B6B] hover:text-[#161616] transition-colors hidden sm:inline-flex items-center gap-1.5"
+          >
+            ☕ Wesprzyj
+          </a>
+          <button
+            onClick={onWriteClick}
+            className="bg-[#161616] text-white rounded-lg px-6 py-2.5 text-[14px] font-medium hover:opacity-85 transition-opacity cursor-pointer"
+          >
+            Napisz list
+          </button>
+        </div>
       </div>
     </header>
   );
