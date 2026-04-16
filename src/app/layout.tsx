@@ -12,6 +12,9 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Letters.",
   description: "Anonimowa przestrzeń nadziei",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
