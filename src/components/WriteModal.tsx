@@ -148,7 +148,7 @@ export default function WriteModal({ isOpen, onClose }: WriteModalProps) {
             onChange={(e) => setGreeting(e.target.value)}
             maxLength={100}
             placeholder="np. Do kogoś, kto to czyta —"
-            className="w-full border-none bg-transparent py-2.5 text-[16px] font-medium text-[#161616] placeholder:text-gray-300 focus:outline-none transition-colors"
+            className="w-full border-none bg-transparent py-2.5 text-[16px] font-medium text-[#161616] placeholder:text-gray-400 focus:outline-none transition-colors"
             style={{ borderBottom: "1.5px solid #E5E5E5" }}
             {...inputBorderHandlers}
           />
@@ -164,7 +164,7 @@ export default function WriteModal({ isOpen, onClose }: WriteModalProps) {
             onChange={(e) => setBody(e.target.value)}
             maxLength={3000}
             placeholder="Pisz to, co czujesz. Nie musisz szukać idealnych słów. Wystarczy, że są prawdziwe."
-            className="w-full min-h-[200px] md:min-h-[280px] border-none bg-transparent text-[16px] leading-[2] text-[#525252] resize-y placeholder:text-gray-300 focus:outline-none"
+            className="w-full min-h-[200px] md:min-h-[280px] border-none bg-transparent text-[16px] leading-[2] text-[#525252] resize-y placeholder:text-gray-400 focus:outline-none"
           />
           <div className={`text-xs font-medium text-right mt-2 ${getCharCountColor()}`}>
             {charCount} / 3000
@@ -182,7 +182,7 @@ export default function WriteModal({ isOpen, onClose }: WriteModalProps) {
             onChange={(e) => setAuthor(e.target.value)}
             maxLength={40}
             placeholder="— Anonim"
-            className="w-full md:w-[200px] border-none bg-transparent py-2.5 text-[16px] font-semibold italic text-[#161616] placeholder:text-gray-300 focus:outline-none transition-colors"
+            className="w-full md:w-[200px] border-none bg-transparent py-2.5 text-[16px] font-semibold italic text-[#161616] placeholder:text-gray-400 focus:outline-none transition-colors"
             style={{ borderBottom: "1.5px solid #E5E5E5" }}
             {...inputBorderHandlers}
           />

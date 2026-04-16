@@ -60,17 +60,13 @@ export default function Hero({ onWriteClick }: HeroProps) {
       {/* Center content */}
       <div className="relative z-10 text-center max-w-[680px]">
         {/* Quote */}
-        <h1 className="text-[26px] md:text-[44px] font-bold leading-[1.3] md:leading-[1.35] tracking-tight text-[#161616] mb-4">
+        <h1 className="text-[26px] md:text-[44px] font-bold leading-[1.3] md:leading-[1.35] tracking-tight text-[#161616] mb-4 text-balance">
           <span
             className="text-[#E5E5E5] text-[48px] md:text-[72px] leading-[0.5] align-top mr-1"
             style={{ fontFamily: "Georgia, serif" }}
             aria-hidden="true"
           >&ldquo;</span>
-          Czasem jedno zdanie od obcego{" "}
-          <span className="hidden md:inline"><br /></span>
-          człowieka zmienia więcej{" "}
-          <span className="hidden md:inline"><br /></span>
-          niż tysiąc rad.
+          Czasem jedno zdanie od obcego człowieka zmienia więcej niż tysiąc rad.
         </h1>
 
         {/* Author */}
