@@ -20,14 +20,7 @@ export default function Footer() {
       {/* Footer bottom */}
       <div className="py-8 px-12 border-t border-[#F5F5F5] flex justify-between items-center text-[13px] text-[#767676]">
         <span>© 2026 Letters. Projekt dla ludzi.</span>
-        <a
-          href="https://buymeacoffee.com/letters.project"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-[#161616] transition-colors"
-        >
-          ☕ Buy me a coffee
-        </a>
+        <span>Zbudowane z troską.</span>
       </div>
     </footer>
   );
