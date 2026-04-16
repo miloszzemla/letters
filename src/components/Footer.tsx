@@ -3,20 +3,18 @@ export default function Footer() {
     <footer>
       {/* Helpline bar */}
       <div
-        className="flex items-center justify-center gap-3 py-4 px-6 border-t border-[#F5F5F5]"
+        className="flex flex-col md:flex-row items-center justify-center gap-1.5 md:gap-3 py-4 px-6 border-t border-[#F5F5F5]"
         style={{ backgroundColor: "#FAFAFA", fontSize: "14px", color: "#525252" }}
       >
         <span className="font-semibold text-[#161616]">Potrzebujesz pomocy?</span>
-        <span
-          aria-hidden="true"
-          className="w-1 h-1 rounded-full bg-[#D4D4D4] inline-block flex-shrink-0"
-        />
-        <span>Telefon Zaufania: 116 123</span>
-        <span
-          aria-hidden="true"
-          className="w-1 h-1 rounded-full bg-[#D4D4D4] inline-block flex-shrink-0"
-        />
-        <span>Centrum Wsparcia: 800 70 2222</span>
+        <div className="flex items-center gap-3">
+          <span>Telefon Zaufania: 116&nbsp;123</span>
+          <span
+            aria-hidden="true"
+            className="w-1 h-1 rounded-full bg-[#D4D4D4] inline-block flex-shrink-0"
+          />
+          <span>Centrum Wsparcia: 800&nbsp;70&nbsp;2222</span>
+        </div>
       </div>
 
       {/* Footer bottom */}
