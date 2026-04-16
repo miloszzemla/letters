@@ -19,13 +19,16 @@ export default function Stats({ letterCount }: StatsProps) {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 py-8 px-4 md:px-6 border-t border-b border-[#F5F5F5] mb-20">
-      {stats.map((stat) => (
-        <div key={stat.label} className="text-center min-w-0">
-          <p className="text-[22px] md:text-[28px] font-bold tracking-tight mb-1 text-[#161616]">
+    <div className="grid grid-cols-3 py-6 px-4 md:px-6 border-t border-b border-[#F5F5F5] mb-20">
+      {stats.map((stat, i) => (
+        <div
+          key={stat.label}
+          className={`text-center px-2 ${i < stats.length - 1 ? "border-r border-[#E5E5E5]" : ""}`}
+        >
+          <p className="text-[20px] md:text-[28px] font-bold tracking-tight mb-0.5 text-[#161616]">
             {stat.value}
           </p>
-          <p className="text-[11px] md:text-[13px] text-[#767676] font-medium uppercase tracking-widest">
+          <p className="text-[10px] md:text-[13px] text-[#767676] font-medium uppercase tracking-widest">
             {stat.label}
           </p>
         </div>
