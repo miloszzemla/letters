@@ -108,7 +108,7 @@ export default function Hero({ onWriteClick }: HeroProps) {
             onClick={onWriteClick}
             className="w-full sm:w-auto bg-[#161616] text-white rounded-[10px] px-8 py-3.5 font-semibold text-[15px] hover:opacity-85 transition-opacity cursor-pointer"
           >
-            Napisz swój list
+            Napisz list
           </button>
           <a
             href="#letters"

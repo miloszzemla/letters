@@ -17,7 +17,7 @@ export default function BottomCTA({ onWriteClick }: BottomCTAProps) {
         onClick={onWriteClick}
         className="bg-[#161616] text-white rounded-[10px] px-9 py-3.5 font-semibold text-[15px] transition-opacity hover:opacity-85"
       >
-        Napisz swój list
+        Napisz list
       </button>
     </section>
   );

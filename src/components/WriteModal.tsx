@@ -129,7 +129,7 @@ export default function WriteModal({ isOpen, onClose }: WriteModalProps) {
   ) : (
     <div className="relative z-10">
       <h2 className="text-2xl font-bold tracking-tight text-[#161616] mb-2">
-        Napisz swój list
+        Napisz list
       </h2>
       <p className="text-sm text-[#525252] mb-8">
         Twoje słowa są anonimowe. Po wysłaniu list trafi do moderacji
