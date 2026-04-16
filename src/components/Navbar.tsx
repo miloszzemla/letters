@@ -43,7 +43,7 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
             href="https://buymeacoffee.com/letters.project"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[14px] font-medium text-[#6B6B6B] hover:text-[#161616] transition-colors hidden sm:inline-flex items-center gap-1.5"
+            className="border border-[#E5E5E5] rounded-lg px-5 py-2.5 text-[14px] font-medium text-[#525252] hover:border-[#BFBFBF] hover:text-[#161616] transition-colors hidden sm:inline-flex items-center gap-1.5"
           >
             ☕ Wesprzyj
           </a>
