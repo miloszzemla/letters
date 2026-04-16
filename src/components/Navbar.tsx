@@ -191,7 +191,7 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
                 {onWriteClick ? (
                   <button
                     onClick={() => { setMenuOpen(false); onWriteClick(); }}
-                    className="w-full bg-white text-[#161616] rounded-lg py-4 text-[16px] font-semibold cursor-pointer"
+                    className="w-full bg-white text-[#161616] rounded-[10px] py-3.5 text-[15px] font-semibold cursor-pointer"
                   >
                     Napisz list
                   </button>
@@ -199,7 +199,7 @@ export default function Navbar({ onWriteClick }: NavbarProps) {
                   <Link
                     href="/"
                     onClick={() => setMenuOpen(false)}
-                    className="block w-full bg-white text-[#161616] rounded-lg py-4 text-[16px] font-semibold text-center"
+                    className="block w-full bg-white text-[#161616] rounded-[10px] py-3.5 text-[15px] font-semibold text-center"
                   >
                     Napisz list
                   </Link>
