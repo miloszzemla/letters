@@ -6,6 +6,39 @@ export const metadata: Metadata = {
   description: "Numery telefonów zaufania i zasoby pomocowe",
 };
 
+const helplines = [
+  {
+    name: "Telefon Wsparcia Emocjonalnego",
+    number: "116 123",
+    tel: "116123",
+    desc: "Bezpłatny, 24/7. Dla dorosłych w kryzysie emocjonalnym.",
+  },
+  {
+    name: "Telefon Zaufania dla Dzieci i Młodzieży",
+    number: "116 111",
+    tel: "116111",
+    desc: "Bezpłatny, 24/7. Prowadzony przez Fundację Empowering Children.",
+  },
+  {
+    name: "Centrum Wsparcia dla osób w kryzysie psychicznym",
+    number: "800 70 2222",
+    tel: "800702222",
+    desc: "Bezpłatny, codziennie 14:00–22:00. Fundacja Itaka.",
+  },
+  {
+    name: "Telefon dla ofiar przemocy",
+    number: "116 006",
+    tel: "116006",
+    desc: "Bezpłatny, 24/7. Dla ofiar przestępstw i przemocy.",
+  },
+  {
+    name: "Numer alarmowy",
+    number: "112",
+    tel: "112",
+    desc: "Bezpłatny, 24/7. W przypadku bezpośredniego zagrożenia życia.",
+  },
+];
+
 export default function Help() {
   return (
     <main className="min-h-screen bg-white">
@@ -25,58 +58,21 @@ export default function Help() {
             Telefony zaufania w Polsce
           </h2>
 
-          <div className="space-y-0 divide-y divide-[#F5F5F5]">
-            {/* Number 1 */}
-            <div className="border-b border-[#F5F5F5] py-4">
-              <p className="mb-1 text-sm font-medium uppercase tracking-wide text-[#767676]">
-                Telefon Zaufania dla Dzieci i Młodzieży
-              </p>
-              <a
-                href="tel:116111"
-                className="text-2xl font-bold text-black hover:underline"
-              >
-                116 111
-              </a>
-            </div>
-
-            {/* Number 2 */}
-            <div className="border-b border-[#F5F5F5] py-4">
-              <p className="mb-1 text-sm font-medium uppercase tracking-wide text-[#767676]">
-                Telefon Zaufania dla Dorosłych
-              </p>
-              <a
-                href="tel:116123"
-                className="text-2xl font-bold text-black hover:underline"
-              >
-                116 123
-              </a>
-            </div>
-
-            {/* Number 3 */}
-            <div className="border-b border-[#F5F5F5] py-4">
-              <p className="mb-1 text-sm font-medium uppercase tracking-wide text-[#767676]">
-                Centrum Wsparcia dla osób w kryzysie psychicznym
-              </p>
-              <a
-                href="tel:800702222"
-                className="text-2xl font-bold text-black hover:underline"
-              >
-                800 70 2222
-              </a>
-            </div>
-
-            {/* Number 4 */}
-            <div className="py-4">
-              <p className="mb-1 text-sm font-medium uppercase tracking-wide text-[#767676]">
-                Telefon Nadziei
-              </p>
-              <a
-                href="tel:116123"
-                className="text-2xl font-bold text-black hover:underline"
-              >
-                116 123
-              </a>
-            </div>
+          <div className="divide-y divide-[#F0F0F0]">
+            {helplines.map((line) => (
+              <div key={line.tel} className="py-5">
+                <p className="text-[13px] font-medium text-[#767676] mb-1">
+                  {line.name}
+                </p>
+                <a
+                  href={`tel:${line.tel}`}
+                  className="text-2xl font-bold text-black hover:underline"
+                >
+                  {line.number}
+                </a>
+                <p className="text-[13px] text-[#9CA3AF] mt-1">{line.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -96,12 +92,20 @@ export default function Help() {
               Fundacja Itaka — Centrum Poszukiwań Ludzi Zaginionych
             </a>
             <a
-              href="https://cpk.org.pl"
+              href="https://116123.pl"
               target="_blank"
               rel="noopener noreferrer"
               className="block font-medium text-[#161616] underline underline-offset-4"
             >
-              Fundacja Centrum Praw Kobiet
+              Instytut Psychologii Zdrowia PTP
+            </a>
+            <a
+              href="https://fdds.pl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block font-medium text-[#161616] underline underline-offset-4"
+            >
+              Fundacja Dajemy Dzieciom Siłę
             </a>
           </div>
         </section>
@@ -113,10 +117,14 @@ export default function Help() {
           </h2>
 
           <div className="space-y-3">
-            <p className="font-medium text-[#161616]">
-              <span>Crisis Text Line — Text HOME to 741741</span>
-              <span className="ml-2 text-sm text-[#767676]">(US)</span>
-            </p>
+            <a
+              href="https://findahelpline.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block font-medium text-[#161616] underline underline-offset-4"
+            >
+              Find a Helpline — wyszukaj linię kryzysową w swoim kraju
+            </a>
             <a
               href="https://befrienders.org"
               target="_blank"
