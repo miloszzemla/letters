@@ -28,7 +28,7 @@ export default function Stats({ letterCount }: StatsProps) {
           <p className="text-[20px] md:text-[28px] font-bold tracking-tight mb-0.5 text-[#161616]">
             {stat.value}
           </p>
-          <p className="text-[10px] md:text-[13px] text-[#767676] font-medium uppercase tracking-widest">
+          <p className="text-[11px] md:text-[13px] text-[#767676] font-medium">
             {stat.label}
           </p>
         </div>
