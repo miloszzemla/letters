@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 interface HeroProps {
   onWriteClick: () => void;
 }
@@ -60,28 +62,48 @@ export default function Hero({ onWriteClick }: HeroProps) {
       {/* Center content */}
       <div className="relative z-10 text-center max-w-[680px]">
         {/* Quote */}
-        <h1 className="text-[26px] md:text-[44px] font-bold leading-[1.3] md:leading-[1.35] tracking-tight text-[#161616] mb-4 text-balance">
+        <motion.h1
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+          className="text-[26px] md:text-[44px] font-bold leading-[1.3] md:leading-[1.35] tracking-tight text-[#161616] mb-4 text-balance"
+        >
           <span
             className="text-[#E5E5E5] text-[48px] md:text-[72px] leading-[0.5] align-top mr-1"
             style={{ fontFamily: "Georgia, serif" }}
             aria-hidden="true"
           >&ldquo;</span>
           Czasem jedno zdanie od obcego człowieka zmienia więcej niż tysiąc rad.
-        </h1>
+        </motion.h1>
 
         {/* Author */}
-        <p className="text-xs md:text-sm text-[#6B6B6B] font-medium mb-8 md:mb-10">
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-xs md:text-sm text-[#6B6B6B] font-medium mb-8 md:mb-10"
+        >
           — z listu anonimowego autora
-        </p>
+        </motion.p>
 
         {/* Tagline */}
-        <p className="text-[15px] md:text-base text-[#525252] leading-relaxed max-w-[440px] mx-auto mb-8 md:mb-9">
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="text-[15px] md:text-base text-[#525252] leading-relaxed max-w-[440px] mx-auto mb-8 md:mb-9"
+        >
           Miejsce, gdzie ludzie piszą listy, które mogą uratować komuś dzień.
           Albo życie.
-        </p>
+        </motion.p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-3"
+        >
           <button
             onClick={onWriteClick}
             className="w-full sm:w-auto bg-[#161616] text-white rounded-[10px] px-8 py-3.5 font-semibold text-[15px] hover:opacity-85 transition-opacity cursor-pointer"
@@ -94,7 +116,7 @@ export default function Hero({ onWriteClick }: HeroProps) {
           >
             Czytaj listy
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
