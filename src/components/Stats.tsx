@@ -19,7 +19,7 @@ export default function Stats({ letterCount }: StatsProps) {
   ];
 
   return (
-    <div className="flex flex-row justify-center gap-6 md:gap-16 py-8 px-4 md:px-6 border-t border-b border-[#F5F5F5] mb-20">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 py-8 px-4 md:px-6 border-t border-b border-[#F5F5F5] mb-20">
       {stats.map((stat) => (
         <div key={stat.label} className="text-center min-w-0">
           <p className="text-[22px] md:text-[28px] font-bold tracking-tight mb-1 text-[#161616]">
